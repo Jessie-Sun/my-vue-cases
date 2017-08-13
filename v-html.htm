@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>v-html</title>
+	<!-- <script src="./node_modules/vue/dist/vue.js"></script> -->
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+	<div v-html="message"></div> <!-- 输出: 菜鸟教程 -->
+	<!-- <p>{{message}}</p>  //输出：<h1>菜鸟教程</h1> -->
+</div>
+
+<script type="text/javascript">
+	new Vue({
+		el: '#app',
+		data: {
+			message: '<h1>菜鸟教程</h1>'
+		}
+	});
+</script>
+</body>
+</html>

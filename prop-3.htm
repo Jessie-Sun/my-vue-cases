@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Prop</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+	<ol>
+		<todo-item v-for="item in sites" v-bind:todo="item"></todo-item>
+	</ol>
+</div>
+
+<script type="text/javascript">
+	//全局注册
+	Vue.component('todo-item', {
+		props: ['todo'],
+		template: '<li>{{todo.text}}</li>'
+	});
+
+	new Vue({
+		el: '#app',
+		data: {
+			sites: [
+				{text: 'A'},
+				{text: 'B'},
+				{text: 'C'}
+			]
+		}
+	});
+</script>
+</body>
+</html>

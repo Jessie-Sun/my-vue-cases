@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>checkbox</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+	<p>单个复选框</p>
+	<input type="checkbox" v-model="checked">
+	<label>{{checked}}</label>
+
+	<p>多个复选框</p>
+	<input type="checkbox" value="A" v-model="checkedNames">
+	<label>A</label>
+	<input type="checkbox" value="B" v-model="checkedNames">
+	<label>B</label>
+	<input type="checkbox" value="C" v-model="checkedNames">
+	<label>C</label>
+	<br/>
+
+	<span>选择的值：{{checkedNames}}</span>
+</div>
+
+<script type="text/javascript">
+	new Vue({
+		el: '#app',
+		data: {
+			checked: false,
+			checkedNames: []
+		}
+	});
+</script>
+</body>
+</html>
